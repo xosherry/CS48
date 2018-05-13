@@ -88,12 +88,14 @@ GEM
     ffi (1.9.23)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    httpclient (2.8.3)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    json (2.1.0)
     less (2.6.0)
       commonjs (~> 0.2.7)
     less-rails (2.8.0)
@@ -222,7 +224,9 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   feedjira
+  httpclient
   jbuilder (~> 2.5)
+  json
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)

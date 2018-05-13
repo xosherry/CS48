@@ -10,6 +10,9 @@ gem 'pg', '>= 0.18', '< 2.0'
 
 gem 'feedjira'
 gem 'twitter-bootstrap-rails'
+gem 'httpclient'
+gem 'json'
+
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

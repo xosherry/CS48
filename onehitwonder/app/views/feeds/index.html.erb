@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+
+<h1 class="text-center">Popular TechCrunch News</h1>
+
+<% @list_of_techcrunch_posts.each do |post| %>
+<!--  <li><%#= post.title %></li>-->
+<!--  <li><%#= post.url %></li>-->
+<!--  <li><%#= post.urlToImage %></li>-->
+<!--  <li><%#= post.description %></li>-->
+<!--  <li><%#= post.publishedAt %></li>-->
+
+  <div class="container well text-center">
+    <% @head = post.title %>
+    <h2><%= link_to post.title, post.url  %></h2>
+    <a href=<%=post.url%> ><img src=<%= post.urlToImage %> class="img-responsive img-thumbnail" ></a>
+    <div>
+      <%= post.description %>
+      <br>
+      <%= post.publishedAt.to_s[0,10].split("-").reverse.join("-") %>
+    </div>
+  </div>
+
+  <br/>
+
+<% end %>
+
