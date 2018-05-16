@@ -7,7 +7,7 @@ class UsatodayPost < Post
     @usatoday_posts = JSON.parse(response)["articles"]
 
     list_of_usatoday_posts = []
-    @@usatoday_posts.each do |post|
+    @usatoday_posts.each do |post|
       new_post = Post.new
       new_post.title = post["title"]
       new_post.url = post["url"]

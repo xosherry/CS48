@@ -9,10 +9,12 @@ class FeedsController < ApplicationController
     techcrunch_api = TechCrunchPost.new
     youtube_api = YoutubePost.new
     usatoday_api = UsatodayPost.new
+    twitter_api = TwitterPost.new
 
     @list_of_techcrunch_posts = techcrunch_api.get_posts
     @list_of_youtube_posts = youtube_api.get_posts
     @list_of_usatoday_posts = usatoday_api.get_posts
+    @list_of_twitter_posts = twitter_api.get_posts
 
   end
 
