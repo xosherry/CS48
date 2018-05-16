@@ -36,3 +36,20 @@
   <br/>
 
 <%end %>
+
+<% @list_of_usa_posts.each do |post| %>
+
+  <div class="container well text-center">
+    <% @head = post.title %>
+    <h2><%= link_to post.title, post.url  %></h2>
+    <a href=<%=post.url%> ><img src=<%= post.urlToImage %> class="img-responsive img-thumbnail" ></a>
+    <div>
+      <%= post.description %>
+      <br>
+      <%= post.publishedAt %>
+    </div>
+  </div>
+
+  <br/>
+
+<% end %>
