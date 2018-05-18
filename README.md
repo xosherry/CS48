@@ -1,5 +1,5 @@
 # CS48
-Super Procrastinator
+News Aggregator Webapp in Ruby
 
 
 System Requirements-
