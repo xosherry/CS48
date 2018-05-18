@@ -3,7 +3,7 @@ class RedditPost < Post
   # belongs_to :post
 
   def get_posts
-    response = HTTParty.get("https://www.reddit.com/r/mildlyinteresting.json", {
+    response = HTTParty.get("https://www.reddit.com/r/all.json", {
         headers: {"User-Agent" => "Httparty"}#,
         #debug_output: STDOUT, # To show that User-Agent is Httparty
     })
