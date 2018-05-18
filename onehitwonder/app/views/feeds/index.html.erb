@@ -1,0 +1,86 @@
+<p id="notice"><%= notice %></p>
+
+
+<h1 class="text-center">One Hit Wonder</h1>
+
+
+
+<% @list_of_twitter_posts.each do |post| %>
+
+  <div class="container well text-center">
+    <% @head = post.title %>
+    <h2><%= link_to post.title, post.url %></h2>
+    <a href=<%= post.url %>><img src=<%= post.urlToImage %> class="img-responsive img-thumbnail" ></a>
+    <div>
+      <%= post.description %>
+      <br>
+      <%= post.publishedAt %>
+    </div>
+  </div>
+
+  <br/>
+
+<% end %>
+
+<% @list_of_techcrunch_posts.each do |post| %>
+
+  <div class="container well text-center">
+    <% @head = post.title %>
+    <h2><%= link_to post.title, post.url  %></h2>
+    <a href=<%=post.url%> ><img src=<%= post.urlToImage %> class="img-responsive img-thumbnail" ></a>
+    <div>
+      <%= post.description %>
+      <br>
+      <%= post.publishedAt %>
+    </div>
+  </div>
+
+  <br/>
+
+<% end %>
+
+<% @list_of_youtube_posts.each do |post| %>
+
+  <div class="container well text-center">
+    <% @head = post.title %>
+    <h2><%= link_to post.title, post.url %></h2>
+    <a href=<%= post.url %>><img src=<%= post.urlToImage %> class="img-responsive img-thumbnail" ></a>
+    <div>
+      <%= post.description %>
+      <br>
+      <%= post.publishedAt %>
+    </div>
+  </div>
+
+  <br/>
+
+<%end %>
+
+<% @list_of_usatoday_posts.each do |post| %>
+
+  <div class="container well text-center">
+    <% @head = post.title %>
+    <h2><%= link_to post.title, post.url  %></h2>
+    <a href=<%=post.url%> ><img src=<%= post.urlToImage %> class="img-responsive img-thumbnail" ></a>
+    <div>
+      <%= post.description %>
+      <br>
+      <%= post.publishedAt %>
+    </div>
+  </div>
+
+  <br/>
+
+<% end %>
+
+<h1 class="text-center">Reddit</h1>
+<%@list_of_reddit_posts = RedditPost.new.get_posts %>
+<% @list_of_reddit_posts.each do |post| %>
+
+  <div class="container well text-center">
+    <% @head = post.title %>
+    <h2><%= link_to post.title, post.url  %></h2>
+    <br/>
+  </div>
+
+<% end %>
