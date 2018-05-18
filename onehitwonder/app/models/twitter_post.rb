@@ -20,6 +20,11 @@ class TwitterPost < Post
         tweetHash["description"] = tweet.text.gsub /&amp;/, "&"
         tweetHash["publishedAt"] = tweet.created_at
         tweetHash["url"] = tweet.uri.to_s
+        if tweet.media?
+             tweetHash["urlToImage"] = tweet.media.collect(&:display_url).to_s[2..-3]
+        else
+             tweetHash["urlToImage"] = ""
+        end
       end
       tweetToJson = tweetHash.to_json #turn single hash into json
       twitterJsonArray[i] = tweetToJson #add single json object to json array
@@ -36,7 +41,7 @@ class TwitterPost < Post
       new_post = Post.new
       new_post.title = post["title"]
       new_post.url = post["url"]
-      new_post.urlToImage = "www.twitterimage.com"
+      new_post.urlToImage = post["urlToImage"]
       new_post.description = post["description"]
       new_post.publishedAt = post["publishedAt"]
       list_of_twitter_posts << new_post
