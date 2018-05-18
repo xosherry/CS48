@@ -14,7 +14,7 @@ gem 'httpclient'
 gem 'json'
 # youtube api
 gem 'yt', '~> 0.28.0'
-
+gem 'httparty'
 gem 'twitter'
 
 # Use Puma as the app server
