@@ -15,17 +15,24 @@ class TwitterPost < Post
     @client.trends(23424977).take(10).each do |trend|
       tweetHash = Hash.new
       tweetHash["title"] = trend.name
-      @client.search(trend.name, lang: "en").take(1).each do |tweet|
-        tweetHash["author"] = "@" + tweet.user.screen_name
-        tweetHash["description"] = tweet.text.gsub /&amp;/, "&"
+
+      @client.search(trend.name, lang: "en", include_entities:"true", retweeted:"false", is_quote_status:"false").take(1).each do |tweet|
+        tweetHash["author"] = tweet.user.name +  "       @" + tweet.user.screen_name
         tweetHash["publishedAt"] = tweet.created_at
         tweetHash["url"] = tweet.uri.to_s
-        if tweet.media?
-             tweetHash["urlToImage"] = tweet.media.collect(&:display_url).to_s[2..-3]
+
+        if tweet.retweet?
+              tweetHash["description"] = tweet.retweeted_status.text.gsub /&amp;/, "&"
+        elsif tweet.quoted_tweet?
+              tweetHash["description"] = tweet.quoted_status.text.gsub /&amp;/, "&"
         else
-             tweetHash["urlToImage"] = ""
+              tweetHash["description"] = tweet.text.gsub /&amp;/, "&"
         end
+
+        tweetHash["urlToImage"] = "http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png"
+
       end
+
       tweetToJson = tweetHash.to_json #turn single hash into json
       twitterJsonArray[i] = tweetToJson #add single json object to json array
       i = i + 1
@@ -39,6 +46,7 @@ class TwitterPost < Post
 
     @twitter_posts.each do |post|
       new_post = Post.new
+      new_post.author = post["author"]
       new_post.title = post["title"]
       new_post.url = post["url"]
       new_post.urlToImage = post["urlToImage"]
