@@ -5,56 +5,124 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-bar-block .w3-bar-item {padding:20px}
 </style>
+
+
+
+
 <body>
-
-<!-- Top menu -->
-<div class="w3-top">
-  <div class="w3-xlarge" style="max-width:1200px;margin:auto;background-color: powderblue";>
-    <div class="w3-center w3-padding-16">One Click Wonder</div>
-  </div>
-</div>
-  
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px;background-color:powderblue";>
-
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-  	<% @list_of_techcrunch_posts.each do |post| %>
-
-	    <div class="w3-quarter">
-	      <% @head = post.title %>
-	      <h2><%= link_to post.title, post.url  %></h2>
-	      <a class="image" href=<%=post.url%> ><img src=<%= post.urlToImage %> class="img-responsive img-thumbnail" style="width:100%" ></a>
-	      <h3>
-	        <%= post.description %>
-	        
-	      </h3>
-	      <p>
-	        <%= post.publishedAt %> </p>
-	    </div>
-
-  <% end %>
-
-    
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+<header class="masthead text-center text-white">
+  <div class="masthead-content">
+    <div class="container">
+      <h1 class="masthead-heading mb-0">ONE CLICK WONDER</h1>
+      <h2 class="masthead-subheading mb-0">Reddit, YouTbe, Twitter, TechCrunch, and USAToday all one click.</h2>
     </div>
   </div>
-  
-  
-<!-- End page content -->
+  <div class="bg-circle-1 bg-circle"></div>
+  <div class="bg-circle-2 bg-circle"></div>
+  <div class="bg-circle-3 bg-circle"></div>
+  <div class="bg-circle-4 bg-circle"></div>
+</header>
+
+
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;background-color:white";>
+
+
+<!-- TechCrunch Photo Grid-->
+<div class="w3-row-padding">
+  <% @list_of_techcrunch_posts.each do |post| %>
+    <div class="w3-third w3-container w3-margin-bottom" style="height:300px">
+      <div class="module line-clamp-title">
+        <p><b><%= link_to post.title, post.url  %></b></p>
+      </div>
+      <a href=<%=post.url%> > <img src=<%= post.urlToImage %> alt="Norway" style="width:100%" class="w3-hover-opacity"> </a>
+      <div class="w3-container w3-white">
+        <div class="module line-clamp-caption">
+          <p><%= post.description %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<!-- YouTube Photo Grid-->
+<div class="w3-row-padding">
+  <% @list_of_youtube_posts.each do |post| %>
+    <div class="w3-third w3-container w3-margin-bottom" style="height:400px">
+      <div class="module line-clamp-title">
+        <p><b><%= link_to post.title, post.url %></b></p>
+      </div>
+      <a href=<%= post.url %>>
+        <img src=<%= post.urlToImage %> alt="Norway" style="width:100%" class="w3-hover-opacity" > </a>
+      <div class="w3-container w3-white">
+        <%= post.publishedAt %>
+        <div class="module line-clamp-caption">
+          <p><%= post.description %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<!-- Reddit Photo Grid-->
+<%@list_of_reddit_posts = RedditPost.new.get_posts %>
+<div class="w3-row-padding">
+  <% @list_of_reddit_posts.each do |post| %>
+    <div class="w3-third w3-container w3-margin-bottom" style="height:300px">
+      <div class="module line-clamp-title">
+        <p><b><%= link_to post.title, post.url %></b></p>
+      </div>
+      <a href=<%= post.url %>>
+        <img src=<%= post.urlToImage %> alt="Norway" style="width:100%" class="w3-hover-opacity"> </a>
+      <div class="w3-container w3-white">
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<!-- Twitter Photo Grid-->
+<div class="w3-row-padding">
+  <% @list_of_techcrunch_posts.each do |post| %>
+    <div class="w3-third w3-container w3-margin-bottom" style="height:300px">
+      <div class="module line-clamp-title">
+        <p><b><%= link_to post.title, post.url %></b></p>
+      </div>
+      <a href=<%= post.url %>>
+        <img src=<%= post.urlToImage %> alt="Norway" style="width:100%" class="w3-hover-opacity"> </a>
+      <div class="w3-container w3-white">
+        <%= post.publishedAt %>
+        <div class="module line-clamp-caption">
+          <p><%= post.description %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<!-- USAToday Photo Grid-->
+<div class="w3-row-padding">
+  <% @list_of_usatoday_posts.each do |post| %>
+    <div class="w3-third w3-container w3-margin-bottom" style="height:300px">
+      <div class="module line-clamp-title">
+        <p><b><%= link_to post.title, post.url %></b></p>
+      </div>
+      <a href=<%= post.url %>>
+        <img src=<%= post.urlToImage %> alt="Norway" style="width:100%" class="w3-hover-opacity"> </a>
+      <div class="w3-container w3-white">
+        <div class="module line-clamp-caption">
+          <p><%= post.description %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 </div>
 
 </body>

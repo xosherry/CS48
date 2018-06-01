@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e89fa6f-4fbc-4b37-8545-b2867d536654" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/models/usatoday_post.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/youtube_post.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/feeds_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/feeds_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/feed.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/feed.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/post.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/feeds/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/feeds/index.html.erb" afterDir="false" />
     </list>
@@ -23,59 +25,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.72474515">
+    <splitter split-orientation="horizontal" split-proportion="0.23235801">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Gemfile">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="schema.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/db/schema.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="feed.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/feed.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+                <state relative-caret-position="30">
+                  <caret line="2" selection-start-line="2" selection-end-line="2" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="feeds_controller.rb" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/controllers/feeds_controller.rb">
+          <file leaf-file-name="index_old.html.erb" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/views/feeds/index_old.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+                <state relative-caret-position="313">
+                  <caret line="84" column="112" selection-start-line="84" selection-start-column="76" selection-end-line="84" selection-end-column="112" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="usatoday_post.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/usatoday_post.rb">
+          <file leaf-file-name="application.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="youtube_post.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/youtube_post.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+                <state relative-caret-position="1311">
+                  <caret line="91" column="25" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -83,8 +58,8 @@
           <file leaf-file-name="tech_crunch_post.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/tech_crunch_post.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="36" lean-forward="true" selection-end-line="23" />
+                <state relative-caret-position="240">
+                  <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="17" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -96,10 +71,27 @@
           <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/feeds/index.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+                <state relative-caret-position="494">
+                  <caret line="56" column="71" selection-start-line="56" selection-start-column="71" selection-end-line="56" selection-end-column="71" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="reddit_post.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/models/reddit_post.rb">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
@@ -140,9 +132,7 @@
         <option value="$PROJECT_DIR$/app/views/posts/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/show.html.erb" />
         <option value="$PROJECT_DIR$/bin/rails" />
-        <option value="$PROJECT_DIR$/app/models/feed.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/views/feeds/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/concerns/techcrunch_post.rb" />
         <option value="$PROJECT_DIR$/app/models/techcrunch_post.rb" />
         <option value="$PROJECT_DIR$/app/models/post.rb" />
@@ -150,6 +140,9 @@
         <option value="$PROJECT_DIR$/app/models/youtube_post.rb" />
         <option value="$PROJECT_DIR$/app/models/usatoday_post.rb" />
         <option value="$PROJECT_DIR$/app/controllers/feeds_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+        <option value="$PROJECT_DIR$/app/models/feed.rb" />
+        <option value="$PROJECT_DIR$/app/views/feeds/index.html.erb" />
       </list>
     </option>
   </component>
@@ -165,9 +158,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="5" />
-    <option name="y" value="24" />
-    <option name="width" value="1400" />
+    <option name="x" value="-8" />
+    <option name="y" value="25" />
+    <option name="width" value="1392" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectView">
@@ -175,7 +168,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,6 +179,19 @@
               <item name="onehitwonder" type="b2602c69:ProjectViewProjectNode" />
               <item name="onehitwonder" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onehitwonder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onehitwonder" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onehitwonder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onehitwonder" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="onehitwonder" type="b2602c69:ProjectViewProjectNode" />
@@ -206,11 +211,44 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="onehitwonder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onehitwonder" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="feeds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onehitwonder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onehitwonder" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onehitwonder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onehitwonder" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onehitwonder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onehitwonder" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onehitwonder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onehitwonder" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="migrate" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -350,49 +388,61 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27398000" />
+    <option name="totallyTimeSpent" value="34374000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="5" y="24" width="1400" height="873" extended-state="0" />
+    <frame x="-8" y="25" width="1392" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13925926" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3298969" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20839469" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32860824" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39948454" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20839469" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3298969" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32860824" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -405,41 +455,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/youtube_post.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/tech_crunch_post.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/feeds/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/feed.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -697,25 +712,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/feeds/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/concerns/techcrunch_post.rb" />
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/feed.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -733,13 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/tech_crunch_post.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="36" lean-forward="true" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/usatoday_post.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -751,6 +745,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/feeds.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/tech_crunch_post.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180525020804_add_columns.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="91" column="25" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/feed.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/reddit_post.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/feeds/index_old.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="84" column="112" selection-start-line="84" selection-start-column="76" selection-end-line="84" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/feeds/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="56" column="71" selection-start-line="56" selection-start-column="71" selection-end-line="56" selection-end-column="71" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
