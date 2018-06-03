@@ -36,19 +36,29 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <!-- Twitter Photo Grid-->
   <div class="w3-row-padding ">
     <% @list_of_twitter_posts.each do |post| %>
-      <div class="w3-third w3-container w3-margin-right  w3-margin-top w3-border w3-round-large" style="height:385px;width:381px">
-        <div class="module line-clamp-title ">
-          <h3><b><%= link_to post.title, post.url %></b></h3>
-        </div>
-        <a href=<%= post.url %>>
-          <img src=<%= post.urlToImage %> alt="Norway" style="width:50%" class="w3-hover-opacity center-block"> </a>
-        <div class="w3-container w3-white">
-          <p><b><%= post.author %></b></p>
-          <p><%= post.description %></p>
-          <div class="module line-clamp-caption">
-            <%= post.publishedAt %>
-          </div>
-        </div>
+      <div class="w3-third w3-container w3-display-container w3-margin-right  w3-margin-top w3-border w3-round-large" style="height:360px;width:383px">
+              <div class="module line-clamp-title" style="width:97%">
+                <h3><b><%= link_to post.title, post.url %></b></h3>
+              </div>
+
+              <div class="w3-row">
+                  <div class="w3-col s3 w3-white">
+                    <a href=<%= post.url %>>
+                      <img src=<%= post.urlToImage %> alt="Norway" style="width:90%" class="w3-hover-opacity center-block w3-margin-right img-circle"> </a>
+                      <p> </p>
+                  </div>
+
+                  <div class="w3-col s9 w3-white">
+                        <p><b><%= post.author %></b></p>
+                        <p><%= post.description %></p>
+                        <div class="module line-clamp-caption">
+                              <%= post.publishedAt %>
+                        </div>
+                  </div>
+              </div>
+
+
+              <img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png" style="width:10%" class="w3-display-bottomright">
       </div>
     <% end %>
   </div>
@@ -57,7 +67,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <div class="w3-row-padding">
   <% @list_of_techcrunch_posts.each do |post| %>
     <div class="w3-third w3-container w3-margin-bottom" style="height:300px">
-      <div class="module line-clamp-title">
+      <div class="module line-clamp-title" style="width:97%">
         <p><b><%= link_to post.title, post.url  %></b></p>
       </div>
       <a href=<%=post.url%> > <img src=<%= post.urlToImage %> alt="Norway" style="width:100%" class="w3-hover-opacity"> </a>
@@ -74,7 +84,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <div class="w3-row-padding">
   <% @list_of_youtube_posts.each do |post| %>
     <div class="w3-third w3-container w3-margin-bottom" style="height:400px">
-      <div class="module line-clamp-title">
+      <div class="module line-clamp-title" style="width:97%">
         <p><b><%= link_to post.title, post.url %></b></p>
       </div>
       <a href=<%= post.url %>>
@@ -91,10 +101,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 
 <!-- Reddit Photo Grid-->
 <%@list_of_reddit_posts = RedditPost.new.get_posts %>
-<div class="w3-row-padding">
+<div class="w3-row-padding" >
   <% @list_of_reddit_posts.each do |post| %>
     <div class="w3-third w3-container w3-margin-bottom" style="height:300px">
-      <div class="module line-clamp-title">
+      <div class="module line-clamp-title" style="width:97%">
         <p><b><%= link_to post.title, post.url %></b></p>
       </div>
       <a href=<%= post.url %>>
@@ -109,7 +119,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <div class="w3-row-padding">
   <% @list_of_usatoday_posts.each do |post| %>
     <div class="w3-third w3-container w3-margin-bottom" style="height:300px">
-      <div class="module line-clamp-title">
+      <div class="module line-clamp-title" style="width:97%">
         <p><b><%= link_to post.title, post.url %></b></p>
       </div>
       <a href=<%= post.url %>>

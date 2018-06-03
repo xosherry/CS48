@@ -1,4 +1,6 @@
 require 'twitter'
+require 'net/http'
+require 'uri'
 class TwitterPost < Post
   # belongs_to :post
 
@@ -29,7 +31,10 @@ class TwitterPost < Post
               tweetHash["description"] = tweet.text.gsub /&amp;/, "&"
         end
 
-        tweetHash["urlToImage"] = "http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png"
+        str = "https://twitter.com/" + tweet.user.screen_name + "/profile_image?size=original"
+        res = Net::HTTP.get_response(URI(str))
+        tweetHash["urlToImage"] = res['location']
+
 
       end
 
