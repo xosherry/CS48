@@ -15,7 +15,14 @@ class FeedsController < ApplicationController
     @list_of_youtube_posts = youtube_api.get_posts
     @list_of_usatoday_posts = usatoday_api.get_posts
     @list_of_twitter_posts = twitter_api.get_posts
+    @list_of_reddit_posts = RedditPost.new.get_posts
 
+    @allPosts = @list_of_techcrunch_posts + @list_of_youtube_posts + @list_of_usatoday_posts + @list_of_twitter_posts + @list_of_reddit_posts
+    @allPosts.sort! {|a, b| b.epochSeconds <=> a.epochSeconds}
+    @allPosts.each do |post|
+      p post.source
+      p post.epochSeconds
+    end
   end
 
   # GET /feeds/1
