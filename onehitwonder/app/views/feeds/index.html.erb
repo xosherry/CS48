@@ -116,8 +116,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <% end %>
 </div>
 
+  
+  
+
+  
+  
+  
 <!-- Reddit Photo Grid-->
-<%@list_of_reddit_posts = RedditPost.new.get_posts %>
+<%#@list_of_reddit_posts = RedditPost.new.get_posts %>
 <div class="w3-row-padding" >
   <% @list_of_reddit_posts.each do |post| %>
     <div class="w3-third w3-container w3-display-container w3-margin-right  w3-margin-top w3-border w3-round-large" style="height:383px;width:383px">
@@ -125,14 +131,23 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
         <p><b><%= link_to post.title, post.url %></b></p>
       </div>
       <a href=<%= post.url %>>
-        <img src=<%= post.urlToImage %> alt="Norway" style="width:95%;max-height:55%" class="w3-hover-opacity center-block "> </a>
+        <img src=<%= post.thumbnail %> alt="Norway" style="width:95%;max-height:55%" class="w3-hover-opacity center-block "> </a>
       <div class="w3-container w3-white">
-
-       <a href="http://reddit.com">
+        <p><b>Score: <%=post.score%> </b> &nbsp; &nbsp; &nbsp; &nbsp;
+          <a href = https://www.reddit.com/r/<%=post.subreddit%>>/R/<%=post.subreddit %></a>
+        </p>
+        <p>
+          <a href = <%= post.commentsLink%>> <%= post.numComments%> Comments</a> &nbsp; &nbsp; &nbsp; &nbsp;
+          <%=post.publishedAt%>
+        </p>
+      <div class="w3-display-bottommiddle " style="width:100%;height:10%">
+         <a href="http://reddit.com">
             <div class="w3-display-bottommiddle " style="width:100%;height:10%">
                 <img src="https://media.glassdoor.com/sqll/796358/reddit-squarelogo-1490630845152.png" style="width:9%" class="w3-display-bottomright w3-circle">
             </div>
       </a>
+      </div>
+
     </div>
 
   </div>
