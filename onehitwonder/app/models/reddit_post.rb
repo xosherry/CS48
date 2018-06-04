@@ -15,7 +15,6 @@ class RedditPost < Post
     list_of_reddit_posts = []
     @reddit_posts.each do |post|
       new_post = Post.new
-      new_post.title = post['data']["title"]
       new_post.url = post['data']['url']
       new_post.urlToImage = post['data']["urlToImage"]
       new_post.publishedAt = Time.at(post['data']['created_utc']).to_datetime
@@ -25,13 +24,26 @@ class RedditPost < Post
       new_post.score = post['data']['score']
       new_post.subreddit = post['data']['subreddit']
       new_post.upvotes = post['data']['ups']
-      thumbnail = "";
-      if post['data']['thumbnail'][0..3].eql? "http" do
-        thumbnail = post['data']['thumbnail']
+      new_post.epochSeconds = post['data']['created_utc'].to_i
+      timeSincePosted = Time.now.to_i - new_post.epochSeconds
+      new_post.source = "REDDIT"
+      thumbnail = "https://www.imforza.com/wp-content/uploads/2011/08/imforza-icon-link-building.png"
+      if post['data'].key?('preview')
+        thumbnail = post['data']['preview']['images'][0]['source']['url']
+        if thumbnail.include? ".gif?"
+          thumbnail = "https://www.imforza.com/wp-content/uploads/2011/08/imforza-icon-link-building.png"
+        end
       end
+      title = post['data']['title'];
+      if title.length > 100
+        title = title[0...100]
+        title = title + "..."
       end
+
       new_post.thumbnail = thumbnail
-      p new_post.title
+      new_post.title = title
+      #p new_post.title
+
       list_of_reddit_posts << new_post
     end
     list_of_reddit_posts

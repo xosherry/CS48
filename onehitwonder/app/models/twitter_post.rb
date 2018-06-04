@@ -51,12 +51,21 @@ class TwitterPost < Post
 
     @twitter_posts.each do |post|
       new_post = Post.new
+      timeStamp = post['publishedAt']
+      year = timeStamp[0...4].to_i
+      month = timeStamp[5...7].to_i
+      day = timeStamp[8...10].to_i
+      hour = timeStamp[11...13].to_i
+      minutes = timeStamp[14...16].to_i
+      time = Time.new(year, month, day, hour, minutes)
+      new_post.epochSeconds = time.to_i
       new_post.author = post["author"]
       new_post.title = post["title"]
       new_post.url = post["url"]
       new_post.urlToImage = post["urlToImage"]
       new_post.description = post["description"]
       new_post.publishedAt = post["publishedAt"]
+      new_post.source = "TWITTER"
       list_of_twitter_posts << new_post
     end
 
