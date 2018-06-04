@@ -19,10 +19,9 @@ class FeedsController < ApplicationController
 
     @allPosts = @list_of_techcrunch_posts + @list_of_youtube_posts + @list_of_usatoday_posts + @list_of_twitter_posts + @list_of_reddit_posts
     @allPosts.sort! {|a, b| b.epochSeconds <=> a.epochSeconds}
-    @allPosts.each do |post|
-      p post.source
-      p post.epochSeconds
-    end
+    # @allPosts.each do |post|
+    #   p "#{post.source}       #{post.epochSeconds}    #{post.publishedAt}"
+    # end
   end
 
   # GET /feeds/1
