@@ -21,8 +21,8 @@ class UsatodayPost < Post
       new_post.url = post["url"]
       new_post.urlToImage = post["urlToImage"]
       new_post.description = post["description"]
-      if new_post.description.to_s.length > 140
-        new_post.description = post['description'][0...140] + "..."
+      if new_post.description.to_s.length > 88
+        new_post.description = post['description'][0...88] + "..."
       end
       new_post.publishedAt = post["publishedAt"].to_s[0,10].split("-").reverse.join("-")
       new_post.source = "USATODAY"
