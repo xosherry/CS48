@@ -10,6 +10,11 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-bar-block .w3-bar-item {padding:10px}
+a,h3:hover {
+    background-color: transparent;
+    text-decoration: none;
+    COLOR: grey;
+}
 </style>
 
 
@@ -36,9 +41,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <!-- Twitter Photo Grid-->
   <div class="w3-row-padding ">
     <% @list_of_twitter_posts.each do |post| %>
+
       <div class="w3-third w3-container w3-display-container w3-margin-right  w3-margin-top w3-border w3-round-large" style="height:383px;width:383px">
               <div class="module line-clamp-title" style="width:97%; height:25%">
-                <h3><b><%= link_to post.title, post.url %></b></h3>
+                <h3><b><%= link_to post.title, post.trendURL %></b></h3>
               </div>
 
               <div class="w3-row">
@@ -50,7 +56,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 
                   <div class="w3-col s9 w3-white">
                         <p><b><%= post.author %></b></p>
-                        <p><%= post.description %></p>
+                        <p><%= link_to post.description, post.url %></p>
                         <div class="module line-clamp-caption">
                               <%= post.publishedAt %>
                         </div>
@@ -116,12 +122,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <% end %>
 </div>
 
-  
-  
 
-  
-  
-  
+
+
+
+
+
 <!-- Reddit Photo Grid-->
 <%#@list_of_reddit_posts = RedditPost.new.get_posts %>
 <div class="w3-row-padding" >

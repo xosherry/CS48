@@ -17,6 +17,17 @@ class TwitterPost < Post
     @client.trends(23424977).take(10).each do |trend|
       tweetHash = Hash.new
       tweetHash["title"] = trend.name
+      strTrend = trend.name.to_s
+      if strTrend.include? "#"
+          strTrend = strTrend[1,strTrend.size]
+          tweetHash["trendURL"] = "https://twitter.com/hashtag/" + strTrend + "?src=hash"
+      elsif strTrend.include? " "
+          strTrend = strTrend.gsub " ", "%20"
+          tweetHash["trendURL"] = "https://twitter.com/search?q=%22" +  strTrend  + "%22&src=tren"
+      else
+          tweetHash["trendURL"] = "https://twitter.com/"
+      end
+
 
       @client.search(trend.name, lang: "en", include_entities:"true", retweeted:"false", is_quote_status:"false").take(1).each do |tweet|
         tweetHash["author"] = tweet.user.name +  "       @" + tweet.user.screen_name
@@ -25,8 +36,10 @@ class TwitterPost < Post
 
         if tweet.retweet?
               tweetHash["description"] = tweet.retweeted_status.text.gsub /&amp;/, "&"
+              tweetHash["publishedAt"] = tweet.retweeted_status.created_at
         elsif tweet.quoted_tweet?
               tweetHash["description"] = tweet.quoted_status.text.gsub /&amp;/, "&"
+              tweetHash["publishedAt"] = tweet.quoted_status.created_at
         else
               tweetHash["description"] = tweet.text.gsub /&amp;/, "&"
         end
@@ -65,6 +78,7 @@ class TwitterPost < Post
       new_post.urlToImage = post["urlToImage"]
       new_post.description = post["description"]
       new_post.publishedAt = post["publishedAt"]
+      new_post.trendURL = post["trendURL"]
       new_post.source = "TWITTER"
       list_of_twitter_posts << new_post
     end
