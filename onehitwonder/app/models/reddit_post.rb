@@ -25,7 +25,40 @@ class RedditPost < Post
       new_post.subreddit = post['data']['subreddit']
       new_post.upvotes = post['data']['ups']
       new_post.epochSeconds = post['data']['created_utc'].to_i
-      timeSincePosted = Time.now.to_i - new_post.epochSeconds
+      secondsSincePosted = (Time.at(Time.now.to_i - new_post.epochSeconds).to_i).abs
+      s = ""
+      if secondsSincePosted < 3600
+        if secondsSincePosted/60 > 1
+          s = "s"
+        end
+        new_post.publishedAt = "Posted #{secondsSincePosted/60} minute#{s} ago."
+        s = ""
+      elsif secondsSincePosted < 86400
+        if secondsSincePosted/3600 > 1
+          s = "s"
+        end
+        new_post.publishedAt = "Posted #{secondsSincePosted/3600} hour#{s}  ago."
+        s = ""
+      elsif secondsSincePosted < 604800
+        if secondsSincePosted/86400 > 1
+          s = "s"
+        end
+        new_post.publishedAt = "Posted #{secondsSincePosted/86400} day#{s} ago."
+        s = ""
+      elsif secondsSincePosted < 2592000
+        if secondsSincePosted/604800 > 1
+          s = "s"
+        end
+        new_post.publishedAt = "Posted #{secondsSincePosted/604800} week#{s} ago."
+        s = ""
+      elsif secondsSincePosted > 2592000
+        if secondsSincePosted/2592000 > 1
+          s = "s"
+        end
+        new_post.publishedAt = "Posted #{secondsSincePosted/2592000} month#{s} ago."
+        s = ""
+      end
+
       new_post.source = "REDDIT"
       thumbnail = "https://www.imforza.com/wp-content/uploads/2011/08/imforza-icon-link-building.png"
       if post['data'].key?('preview')
